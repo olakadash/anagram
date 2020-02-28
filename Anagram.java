@@ -4,11 +4,11 @@ public class Anagram {
 
 
     public static void main (String[] args) {
-        
-        isAnagram("cat","tac");
+
+        isAnagram("cat","tac","atc ");
     }
 
-    public    static void isAnagram(String stringOne, String stringTwo) {
+    public    static void isAnagram(String stringOne, String stringTwo ,String stringthree ) {
 
         if (stringOne.length() != stringTwo.length()) {
             System.out.println(stringOne + " and " + stringTwo + " are not anagrams.");
@@ -17,10 +17,12 @@ public class Anagram {
 
         HashMap mapOne = createMapKeys(stringOne);
         HashMap mapTwo = createMapKeys(stringTwo);
-        if (mapOne.equals(mapTwo)) {
-            System.out.println(stringOne + " and " + stringTwo + " are anagrams");
+        HashMap mapThree = createMapKeys(stringthree);
+
+        if (mapOne.equals(mapTwo.equals( mapThree))) {
+            System.out.println(stringOne + " and " + stringTwo +" and "+stringthree+ " are anagrams");
         } else {
-            System.out.println(stringOne + " and " + stringTwo + " are not anagrams.");
+            System.out.println(stringOne + " and " + stringTwo +" and "+stringthree+ " are not anagrams.");
         }
     }
     public static HashMap createMapKeys(String str) {
